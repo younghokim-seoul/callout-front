@@ -1,0 +1,56 @@
+name: callout
+description: callout front app
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.2 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  arc:
+    git: https://github.com/akthfdyd/arc.git
+
+  cupertino_icons: ^1.0.2
+  freezed: ^2.3.2
+  flutter_riverpod: ^2.1.1
+  get_it: ^7.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+
+flutter:
+
+  uses-material-design: true
+
+
+
+
+
+  fonts:
+    - family: NotoSansKR
+      fonts:
+        - asset: fonts/NotoSansKR-Thin.otf
+          weight: 100
+        - asset: fonts/NotoSansKR-Light.otf
+          weight: 200
+        - asset: fonts/NotoSansKR-DemiLight.otf
+          weight: 300
+        - asset: fonts/NotoSansKR-Regular.otf
+          weight: 400
+        - asset: fonts/NotoSansKR-Medium.otf
+          weight: 500
+        - asset: fonts/NotoSansKR-Bold.otf
+          weight: 700
+        - asset: fonts/NotoSansKR-Black.otf
+          weight: 900
+
+
