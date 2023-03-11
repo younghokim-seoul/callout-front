@@ -1,5 +1,11 @@
+import 'package:callout/di/di_container.dart';
+import 'package:callout/feature/screen/main/tab/bottom_main_viewmodel.dart';
+import 'package:callout/utils/dev_log.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+
 
 class BottomMainView extends ConsumerStatefulWidget {
   @override
@@ -9,6 +15,22 @@ class BottomMainView extends ConsumerStatefulWidget {
 class BottonMainViewState extends ConsumerState<BottomMainView> {
 
   final GlobalKey<ScaffoldState> _bottomKey = GlobalKey<ScaffoldState>();
+
+  final bottomTabViewModel = it<BottomMainViewModel>();
+
+  @override
+  void initState() {
+    Log.i("BottomTabView initState");
+    bottomTabViewModel.loadState(BottomState.HOME);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    Log.i("BottomTabView dispose");
+    bottomTabViewModel.disposeAll();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +49,13 @@ class BottonMainViewState extends ConsumerState<BottomMainView> {
 
   BottomAppBar buildBottomNavigation() {
     return BottomAppBar(
-      color: Colors.white,
+      color: Colors.black,
       shape: const CircularNotchedRectangle(),
       notchMargin: 10,
       elevation: 0,
-      child: Container(),
+      child: Container(
+        height: 60.h,
+      ),
     );
   }
 
