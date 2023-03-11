@@ -16,16 +16,21 @@ dependencies:
     git: https://github.com/akthfdyd/arc.git
 
   cupertino_icons: ^1.0.2
-  freezed: ^2.3.2
   flutter_riverpod: ^2.1.1
   get_it: ^7.2.0
   flutter_screenutil: ^5.7.0
+  auto_route: ^5.0.4
+  freezed_annotation: ^2.2.0
+  json_annotation: ^4.8.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   flutter_lints: ^2.0.0
+  build_runner: ^2.3.3
+  freezed: ^2.3.2
+  json_serializable: ^6.6.1
+  auto_route_generator: ^5.0.3
 
 
 flutter:

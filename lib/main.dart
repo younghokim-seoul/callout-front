@@ -1,5 +1,6 @@
 import 'package:arc/arc.dart';
-import 'package:callout/feature/screen/main/tab/bottom_main_view.dart';
+import 'package:callout/feature/screen/main/login/email_login_page.dart';
+import 'package:callout/feature/screen/main/tab/bottom_main_page.dart';
 import 'package:callout/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -17,6 +18,8 @@ class App extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+
+
     return ScreenUtilInit(
         designSize: const Size(360, 690),
         minTextAdapt: true,
@@ -33,7 +36,7 @@ class App extends ConsumerWidget {
             },
             theme: ThemeData(
               fontFamily: 'NotoSansKR',
-              scaffoldBackgroundColor: Colors.white,
+              scaffoldBackgroundColor: Colors.black,
               primarySwatch: Colors.grey,
               appBarTheme: const AppBarTheme(
                 backgroundColor: Colors.white,
@@ -51,7 +54,7 @@ class App extends ConsumerWidget {
                 unselectedLabelStyle: TextStyle(fontSize: 12),
               ),
             ),
-            home: BottomMainView(),
+            home: EmailLoginPage(),
           );
         });
   }

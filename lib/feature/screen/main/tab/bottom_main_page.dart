@@ -5,29 +5,28 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+class BottomTabPage extends ConsumerStatefulWidget {
+  const BottomTabPage({super.key});
 
-
-class BottomMainView extends ConsumerStatefulWidget {
   @override
-  ConsumerState<ConsumerStatefulWidget> createState() => BottonMainViewState();
+  ConsumerState<ConsumerStatefulWidget> createState() => BottonTabPageState();
 }
 
-class BottonMainViewState extends ConsumerState<BottomMainView> {
-
+class BottonTabPageState extends ConsumerState<BottomTabPage> {
   final GlobalKey<ScaffoldState> _bottomKey = GlobalKey<ScaffoldState>();
 
   final bottomTabViewModel = it<BottomMainViewModel>();
 
   @override
   void initState() {
-    Log.i("BottomTabView initState");
+    Log.i("BottomTabPage initState");
     bottomTabViewModel.loadState(BottomState.HOME);
     super.initState();
   }
 
   @override
   void dispose() {
-    Log.i("BottomTabView dispose");
+    Log.i("BottomTabPage dispose");
     bottomTabViewModel.disposeAll();
     super.dispose();
   }
@@ -42,9 +41,7 @@ class BottonMainViewState extends ConsumerState<BottomMainView> {
   }
 
   Container buildBody() {
-    return Container(
-
-    );
+    return Container();
   }
 
   BottomAppBar buildBottomNavigation() {
@@ -58,5 +55,4 @@ class BottonMainViewState extends ConsumerState<BottomMainView> {
       ),
     );
   }
-
 }
